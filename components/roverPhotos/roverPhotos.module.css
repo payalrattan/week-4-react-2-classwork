@@ -1,0 +1,46 @@
+.roverContainer {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  background-color: #0b3d91; 
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.roverTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.roverGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.roverCard {
+  background-color: #142850;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.roverCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.roverCard p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.roverCard p b {
+  color: #90cdf4;
+}

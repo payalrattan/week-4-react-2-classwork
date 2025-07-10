@@ -1,10 +1,12 @@
+
 import { AstronomyPOD } from "@/components/astronomyPOD/AstronomyPOD";
-import { RoverPhotos } from "@/components/roverPhotos/RoverPhotos";
-export default function Home() {
+
+export default function APODPage() {
+    const title = "Astronomy Picture of the Day";
   return (
     <div>
+        <h1>{title}</h1>
       <AstronomyPOD />
-      <RoverPhotos />
     </div>
   );
 }
