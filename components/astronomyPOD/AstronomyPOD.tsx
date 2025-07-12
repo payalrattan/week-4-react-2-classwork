@@ -5,7 +5,8 @@ import { Image } from "@/components/image/Image";
 export async function AstronomyPOD() {
   const nasaResponse = await fetch(`${NASA_URLs.astronomyPicOfTheDay}`);
   const nasaData = await nasaResponse.json();
-
+  console.log("NASA Data:", nasaData);
+  
   return (
     
     <div className={styles.podContainer}>
@@ -13,6 +14,7 @@ export async function AstronomyPOD() {
 
       <Image
         imgURL={nasaData.url}
+        title={nasaData.title}
         alt={nasaData.title}
         appearance={styles.podImage}
         explanation={nasaData.explanation}
