@@ -8,14 +8,16 @@ import styles from "./roverPhotos.module.css";
 export function RoverPhotos() {
   const [marsRover, setMarsRover] = useState({});
   const title = "Mars Rover Photos";
+ 
+
+useEffect(() => {
   async function fetchRoverData() {
     const response = await fetch(NASA_URLs.marsRoverPhoto);
     const data = await response.json();
     setMarsRover(data);
   }
-  useEffect(() => {
-    fetchRoverData();
-  }, []);
+  fetchRoverData();
+}, []);
 
   return (
     <div className={styles.roverContainer}>
@@ -44,5 +46,6 @@ export function RoverPhotos() {
           ))}
       </div>
     </div>
+   
   );
 }
